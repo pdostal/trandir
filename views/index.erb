@@ -3,81 +3,13 @@
 </header>
 <div class="row">
   <article class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-    <h2>Odjezdové tabule</h2>
-    <ul>
-      <li>Praha</li>
-      <ul>
-        <li>Hlavní - <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5457076&t=2">Odj</a> / <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5457076&t=1">Pří</a></li>
-        <li>Masarykovo - <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5457236&t=2">Odj</a> / <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5457236&t=1">Pří</a></li>
-        <li>Smíchov - <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5457226&t=2">Odj</a> / <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5457226&t=1">Pří</a></li>
-        <li>Libeň - <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5457176&t=2">Odj</a> / <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5457176&t=1">Pří</a></li>
-      </ul>
-      <li>Ostrava</li>
-      <ul>
-        <li>Svinov - <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5434434&t=2">Odj</a> / <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5434434&t=1">Pří</a></li>
-        <li>Hlavní - <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5434364&t=2">Odj</a> / <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5434364&t=1">Pří</a></li>
-      </ul>
-      <li>Pardubice hl.n. - <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5453613&t=2">Odj</a> / <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5453613&t=1">Pří</a></li>
-      <li>Brno hl.n. - <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5433295&t=2">Odj</a> / <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5433295&t=1">Pří</a></li>
-      <li>Plzeň - <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5473275&t=2">Odj</a> / <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5473275&t=1">Pří</a></li>
-      <li>Žďár nad Sázavou - <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5437015&t=2">Odj</a> / <a href="http://provoz.szdc.cz/Tabule/StationDetail.aspx?id=5437015&t=1">Pří</a></li>
-    </ul>
-    <ul>
-      <li><a href="http://provoz.szdc.cz/Tabule/">SŽDC</a></li>
-    </ul>
+    <%= erb :tabule %>
   </article>
   <article class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-    <h2>Řazení vlaku</h2>
-    <form action="http://www.zelpage.cz/razeni/12/" method="get">
-      <input type="text" name="dotaz" maxlength="50" size="10" style="text-align: center;" value="" />
-      <select name="rocnik" style="vertical-align: middle;">
-        <option value="14" selected="selected">2014</option>
-        <option value="13">2013</option>
-        <option value="12">2012</option>
-        <option value="11">2011</option>
-        <option value="10">2010</option>
-        <option value="09">2009</option>
-        <option value="08">2008</option>
-        <option value="07">2007</option>
-      </select><br />
-      <span>Vyhledat v:</span>
-      <input type="submit" name="cr" value="ČR" />
-      <input type="submit" name="sk" value="SK" />
-    </form>
-    <ul>
-      <li>Osobní vlaky - <a href="http://www.zelpage.cz/razeni/12/cr/Os/">Os</a></li>
-      <li>Spěšné vlaky - <a href="http://www.zelpage.cz/razeni/12/cr/Sp/">Sp</a></li>
-      <li>Rychlíky - <a href="http://www.zelpage.cz/razeni/12/cr/R/">R</a></li>
-      <li>Expressy - <a href="http://www.zelpage.cz/razeni/12/cr/Ex/">Ex</a></li>
-      <li>InterCity - <a href="http://www.zelpage.cz/razeni/12/cr/IC/">IC</a></li>
-      <li>EuroCity - <a href="http://www.zelpage.cz/razeni/12/cr/EC/">EC</a></li>
-      <li>LeoExpress - <a href="http://www.zelpage.cz/razeni/12/cr/LE/">LE</a></li>
-      <li>EuroNight - <a href="http://www.zelpage.cz/razeni/12/cr/EN/">EN</a></li>
-    </ul>
-    <ul>
-      <li><a href="http://www.zelpage.cz/razeni/">ŽelPage</a></li>
-      <li><a href="http://g-v-d.sweb.cz/">GVD</a></li>
-    </ul>
+    <%= erb :razeni %>
   </article>
   <article class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-    <h2>Poloha vlaku</h2>
-    <ul>
-      <li><a href="http://babitron.ic.cz/">Babitron</a></li>
-      <li><a href="http://www.cd.cz/cd-online/poloha-vlaku/">ČD</a></li>
-      <li><a href="http://provoz.szdc.cz/grapp/">GRAPP</a></li>
-      <li><a href="http://regiojet.rfc.cz/">RegioJet</a></li>
-    </ul>
-    <h2>Výluky</h2>
-    <ul>
-      <li><a href="http://www.vyluky.cz/">ŽelPage</a></li>
-      <li><a href="http://www.cd.cz/vyluky">ČD</a></li>
-    </ul>
-    <h2>Dopravci</h2>
-    <ul>
-      <li><a href="https://www.cd.cz/eshop/">ČD</a> / <a href="https://moje.inkarta.cz/">IN karta</a></li>
-      <li><a href="https://jizdenky.studentagency.cz/Login.1">RegioJet</a></li>
-      <li><a href="http://www.le.cz/">LeoExpress</a></li>
-    </ul>
+    <%= erb :zbytek %>
   </article>
 </div>
 <footer class="row">
