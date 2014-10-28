@@ -1,10 +1,17 @@
 require 'rubygems'
 require 'sinatra'
 
-configure dset :server, 'thin'
+configure do
+  set :server, 'thin'
   set port: 3000
   set port: '0.0.0.0'
-enhelpers do
-enget '/' derb :index
-enget '/znaceni' derb :znaceni
+end
+
+helpers do
+  get '/' do
+    erb :index
+  end
+  get '/znaceni' do
+    erb :znaceni
+  end
 end
