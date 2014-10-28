@@ -13,3 +13,7 @@ end
 get '/' do
   erb :index
 end
+
+get '/znaceni' do
+  erb :znaceni
+end
