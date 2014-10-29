@@ -2,16 +2,18 @@ require 'rubygems'
 require 'sinatra'
 
 configure do
-  set :server, 'thin'
+  set server: 'thin'
   set port: 3000
   set port: '0.0.0.0'
 end
 
 helpers do
-  get '/' do
+end
+
+get '/' do
     erb :index
-  end
-  get '/znaceni' do
-    erb :znaceni
-  end
+end
+
+get '/znaceni' do
+  erb :znaceni
 end
