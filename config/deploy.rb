@@ -4,11 +4,25 @@ set :stages, %w(production)
 set :default_stage, 'production'
 set :scm, :git
 set :format, :pretty
-set :log_level, :inf# set :pty, true
+set :log_level, :info
+
+# set :pty, true
 # set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 set :keep_releases, 3
 
-namespace :deploy dafter :publishing, :restart don roles(:app), in: :sequence, wait: 5 dexecute :touch, release_path.join('tmp/restart.txt')
-    enenafter :restart, :uptime don roles(:web), in: :groups duptime = capture(:uptime)
+namespace :deploy do
+
+  after :publishing, :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
+
+  after :restart, :uptime do
+    on roles(:web), in: :groups do
+      uptime = capture(:uptime)
       "#{host.hostname} reports: #{uptime}"
-    enenend
+    end
+  end
+
+end
