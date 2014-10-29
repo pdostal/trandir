@@ -1,8 +1,8 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
+gem 'sinatra'
 
-gem "sinatra"
-
-group :development dgem 'thin'
+group :development do
+  gem 'thin'
   gem 'capistrano'
   gem 'capistrano-rvm'
 end
