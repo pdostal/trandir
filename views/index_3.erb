@@ -10,9 +10,17 @@
   </li>
   <li>
     <a href="http://tram.mobilnitabla.cz">tramMT</a>
-    <form action="tablo.php" method="GET">
-      <input type="text" name="zastavka" style="width: 100px;" />
+    <form action="http://tram.mobilnitabla.cz/tablo.php" method="GET">
+      <input type="text" name="zastavka" />
       <input type="submit" value="Přejit" />
+    </form>
+  </li>
+  <li>
+    <a href="http://www.mpvnet.cz/pid/map">busPID</a>
+    <form name="form" id="formid" method="post" action="http://tram.mobilnitabla.cz/dejkod.php">
+      <input type="text" id="inputname" name="name" />
+      <input type="submit" value="Vyhledat" />
+      <input type="hidden" id="operator" name="operator" value="1" >
     </form>
   </li>
   <li>
