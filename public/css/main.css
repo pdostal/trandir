@@ -1,4 +1,8 @@
 ul { padding-left: 25px; }
 ul ul { padding-left: 15px; }
 
+form,input { display: inline-block; }
+form { white-space: nowrap; }
+input { border: 0px solid #fff; background: #fff; }
+
 footer { text-align: center; }
