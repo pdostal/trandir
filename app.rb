@@ -1,19 +1,23 @@
 require 'rubygems'
-require 'sinatra'
+require 'sinatra/base'
 
-configure do
-  set server: 'thin'
-  set port: 3000
-  set port: '0.0.0.0'
-end
+class TranDir < Sinatra::Base
 
-helpers do
-end
+  configure do
+    set server: 'thin'
+    set port: 3000
+    set port: '0.0.0.0'
+  end
 
-get '/' do
-    erb :index
-end
+  helpers do
+  end
 
-get '/znaceni' do
-  erb :znaceni
+  get '/' do
+      erb :index
+  end
+
+  get '/znaceni' do
+    erb :znaceni
+  end
+
 end
