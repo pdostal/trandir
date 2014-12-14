@@ -5,4 +5,6 @@ form,input { display: inline-block; }
 form { white-space: nowrap; }
 input { border: 0px solid #fff; background: #fff; }
 
+.TrainTypes>a { margin-right: 7.5px; }
+
 footer { text-align: center; }
