@@ -1,3 +1,7 @@
+header,footer { clear: both; }
+
+.c4 { display: inline-block; white-space: nowrap; }
+
 ul { padding-left: 25px; }
 ul ul { padding-left: 15px; }
 
