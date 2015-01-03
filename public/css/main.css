@@ -1,13 +1,14 @@
 header,footer { clear: both; }
 
-section { text-align: left; }
-.c2 { display: inline-block; white-space: nowrap; }
+li { margin: 0px; }
+ul { margin: 0px 0px 0px 5px; padding-left: 5px; }
+ul ul { padding-left: 5px; margin: 0px 0px 0px 10px; }
+.nonelist ul { list-style-type: none; margin-left: 15px; }
 
-.nonelist ul { list-style-type: none; }
-ul { margin: 0px; padding-left: 5px; }
-ul ul { padding-left: 10px; }
+section { margin-bottom: 15px; }
 
-h2 { text-align: left; padding-left: 5px; margin-bottom: 0px; font-size: 1.25em; }
+h2 { text-align: left; padding-left: 5px; margin-bottom: 0px; font-size: 1.5em; }
+a { color: #0000ff; text-decoration: none; display: inline-block; }
 
 input[type=text],select { width: 155px; }
 input,select { border: 0px solid #fff; background: #fff; }
