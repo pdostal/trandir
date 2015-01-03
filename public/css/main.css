@@ -1,9 +1,11 @@
 ul { padding-left: 25px; }
 ul ul { padding-left: 15px; }
 
+input[type=text],select { width: 155px; }
+input,select { border: 0px solid #fff; background: #fff; }
+input[type=submit] { text-align: left; }
 form,input { display: inline-block; }
 form { white-space: nowrap; }
-input { border: 0px solid #fff; background: #fff; }
 
 .TrainTypes>a { margin-right: 7.5px; }
 
