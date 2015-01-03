@@ -13,9 +13,10 @@ input[type=text],select { width: 155px; }
 input,select { border: 0px solid #fff; background: #fff; }
 input[type=submit] { text-align: left; padding: 0px 10px; }
 form,input { display: inline-block; }
-form { white-space: nowrap; margin: 0px; }
+form { margin: 0px; }
 
 .TrainTypes { margin-left: 5px; }
+.TrainTypes>div { white-space: nowrap; display: inline-block; }
 .TrainTypes>a { margin-right: 7.5px; }
 
 footer>span { margin: 25px auto; padding: 0px 5px; text-align: left; }
