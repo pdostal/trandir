@@ -1,0 +1,3 @@
+[submodule "public/css/skeleton"]
+	path = public/css/skeleton
+	url = git@github.com:dhg/Skeleton.git

@@ -16,4 +16,4 @@ input { border: 0px solid #fff; background: #fff; }
 .TrainTypes { margin-left: 5px; }
 .TrainTypes>a { margin-right: 7.5px; }
 
-footer { text-align: center; }
+footer>span { margin: 25px 0px; padding: 0px 5px; }
