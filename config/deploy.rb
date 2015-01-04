@@ -3,6 +3,7 @@
 set :stages, %w(production)
 set :default_stage, 'production'
 set :scm, :git
+set :git_enable_submodules, 1
 set :format, :pretty
 set :log_level, :info
 
@@ -12,13 +13,7 @@ set :keep_releases, 3
 
 namespace :deploy do
 
-  after :publishing, :submodules do
-    on roles(:app), in: :sequence, wait: 5 do
-      execute "cd '#{release_path}'; git submodule update --init --recursive"
-    end
-  end
-
-  after :submodules, :restart do
+  after :publishing, :restart do
     on roles(:app), in: :sequence, wait: 5 do
       execute :touch, release_path.join('tmp/restart.txt')
     end
