@@ -3,6 +3,7 @@
 set :stages, %w(production)
 set :default_stage, 'production'
 set :scm, :git
+set :git_enable_submodules, 1
 set :format, :pretty
 set :log_level, :info
 
