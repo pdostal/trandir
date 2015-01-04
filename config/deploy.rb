@@ -3,7 +3,6 @@
 set :stages, %w(production)
 set :default_stage, 'production'
 set :scm, :git
-set :git_enable_submodules, 1
 set :format, :pretty
 set :log_level, :info
 
@@ -11,16 +10,18 @@ set :log_level, :info
 # set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 set :keep_releases, 3
 
-namespace :bundle do
-
-  desc "run bundle install and ensure all gem requirements are met"
-  task :install do
-    execute "cd #{current_path} && bundle install  --without=test --no-update-sources"
+namespace :git do
+  desc 'Copy repo to releases'
+  task create_release: :'git:update' do
+    on roles(:all) do
+      with fetch(:git_environmental_variables) do
+        within repo_path do
+          execute :git, :clone, '-b', fetch(:branch), '--recursive', '.', release_path
+        end
+      end
+    end
   end
-
 end
-
-before "deploy:restart", "bundle:install"
 
 namespace :deploy do
 
