@@ -1,0 +1,4 @@
+.capignore
+lib
+config
+.git

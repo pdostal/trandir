@@ -9,6 +9,7 @@ set :log_level, :info
 # set :pty, true
 # set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 set :keep_releases, 3
+set :git_strategy, SubmoduleStrategy
 
 namespace :deploy do
 
