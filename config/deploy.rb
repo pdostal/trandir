@@ -11,6 +11,17 @@ set :log_level, :info
 # set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 set :keep_releases, 3
 
+namespace :bundle do
+
+  desc "run bundle install and ensure all gem requirements are met"
+  task :install do
+    run "cd #{current_path} && bundle install  --without=test --no-update-sources"
+  end
+
+end
+
+before "deploy:restart", "bundle:install"
+
 namespace :deploy do
 
   after :publishing, :restart do
