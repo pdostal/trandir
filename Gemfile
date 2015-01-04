@@ -5,4 +5,5 @@ group :development do
   gem 'thin'
   gem 'capistrano'
   gem 'capistrano-rvm'
+  gem 'capistrano-deepmodules'
 end
