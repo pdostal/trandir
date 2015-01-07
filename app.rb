@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'sinatra/base'
+require 'sinatra/assetpack'
 
 class TranDir < Sinatra::Base
 
@@ -9,11 +10,15 @@ class TranDir < Sinatra::Base
     set port: '0.0.0.0'
   end
 
+  register Sinatra::AssetPack
+  assets do
+  end
+
   helpers do
   end
 
   get '/' do
-      erb :index
+    erb :index
   end
 
   get '/znaceni' do
