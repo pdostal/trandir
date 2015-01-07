@@ -10,6 +10,19 @@ set :log_level, :info
 # set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 set :keep_releases, 3
 
+desc "Run rake task on server"
+task :sake do
+  on roles(:app), in: :sequence, wait: 5 do
+    within release_path do
+      as :deploy do
+        with rails_env: :production do
+          execute :rake, "assetpack:build", "RAILS_ENV=production"
+        end
+      end
+    end
+  end
+end
+
 namespace :git do
   desc 'Copy repo to releases'
   task create_release: :'git:update' do
@@ -24,7 +37,6 @@ namespace :git do
 end
 
 namespace :deploy do
-
   after :publishing, :restart do
     on roles(:app), in: :sequence, wait: 5 do
       execute :touch, release_path.join('tmp/restart.txt')
@@ -37,5 +49,4 @@ namespace :deploy do
       "#{host.hostname} reports: #{uptime}"
     end
   end
-
 end
