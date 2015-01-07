@@ -12,6 +12,21 @@ class TranDir < Sinatra::Base
 
   register Sinatra::AssetPack
   assets do
+    serve '/js', :from => 'public/js'
+    serve '/css', :from => 'public/css'
+    serve '/css/skeleton', :from => 'public/css/skeleton/css'
+
+    js :application, [
+      'js/*.js'
+    ]
+
+    css :application, [
+      '/css/skeleton/*.css',
+      '/css/*.css'
+    ]
+
+    js_compression :jsmin
+    css_compression :sass
   end
 
   helpers do
