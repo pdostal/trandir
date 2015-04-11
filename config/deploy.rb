@@ -11,7 +11,7 @@ set :log_level, :info
 set :keep_releases, 3
 
 desc "Run rake task on server"
-task :sake do
+task :rake do
   on roles(:app), in: :sequence, wait: 5 do
     within release_path do
       as :deploy do
