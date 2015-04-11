@@ -5,5 +5,5 @@ gem 'sinatra-assetpack'
 group :development do
   gem 'thin'
   gem 'capistrano'
-  gem 'capistrano-rvm'
+  gem 'rvm1-capistrano3', require: false
 end
