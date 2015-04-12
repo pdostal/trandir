@@ -25,24 +25,23 @@ namespace :git do
 end
 
 namespace :deploy do
-  after :publishing, :assetpack do
-    on primary(:app) do
-      within current_path do
-        with :rails_env => fetch(:rails_env) do
-          # rake 'assetpack:build'
-          execute "cd #{release_path}; sh assetpack.sh"
-        end
-      end
-    end
-  end
-
-  before :assetpack, 'rvm1:hook'
-
-  after :assetpack, :restart do
+    after :publishing, :restart do
     on roles(:app), in: :sequence, wait: 5 do
       execute :touch, release_path.join('tmp/restart.txt')
     end
   end
+
+  after :restart, :assetpack do
+    on primary(:app) do
+      within current_path do
+        with :rails_env => fetch(:rails_env) do
+          # rake 'assetpack:build'
+          # execute "cd #{release_path}; sh assetpack.sh"
+        end
+      end
+    end
+  end
+  # before :assetpack, 'rvm1:hook'
 
   after :restart, :uptime do
     on roles(:web), in: :groups do
