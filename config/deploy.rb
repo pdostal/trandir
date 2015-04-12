@@ -30,7 +30,7 @@ namespace :deploy do
       within current_path do
         with :rails_env => fetch(:rails_env) do
           # rake 'assetpack:build'
-          execute "cd #{release_path}; source /usr/local/rvm/scripts/rvm; rake assetpack:build"
+          execute "cd #{release_path}; sh assetpack.sh"
         end
       end
     end

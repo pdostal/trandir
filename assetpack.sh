@@ -7,5 +7,5 @@
 #   printf "ERROR: An RVM installation was not found.\n"
 # fi
 
-source /usr/local/rvm/environments/ruby-2.1.2
+. /usr/local/rvm/environments/ruby-2.1.2
 rake assetpack:build
