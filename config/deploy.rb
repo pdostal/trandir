@@ -9,6 +9,19 @@ set :log_level, :info
 set :rbenv_type, :user
 set :rbenv_ruby, File.read('.ruby-version').strip
 
+namespace :git do
+  desc 'Copy repo to releases'
+  task create_release: :'git:update' do
+    on roles(:all) do
+      with fetch(:git_environmental_variables) do
+        within repo_path do
+          execute :git, :clone, '-b', fetch(:branch), '--recursive', '.', release_path
+        end
+      end
+    end
+  end
+end
+
 namespace :deploy do
   before :publishing, :build_site do
     on roles(:app) do
