@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ site.name }}</title>
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="author" content="{{ site.author }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% stylesheet normalize %}
+    {% stylesheet skeleton %}
+    {% stylesheet main %}
+    {% javascript main %}
+  </head>
+  <body class="container">
+    {{ content }}
+    <footer class="row">
+      <span class="four columns offset-by-four">
+        &copy; <a href="http://pdostal.cz/">Pavel Dostál</a>
+      </span>
+    </footer>
+  </body>
+</html>

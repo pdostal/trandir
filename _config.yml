@@ -1,4 +1,5 @@
 name: "TranDir"
+author: "Pavel Dostál"
 description: "Czech Transport Directory"
 
 port: 3000
@@ -7,7 +8,6 @@ url: "http://trandir.pdostal.cz"
 
 markdown: rdiscount
 permalink: pretty
-highlighter: pygments
 
 exclude: ["Gemfile*", "Capfile", "lib/", "config/", "README.md"]
 
@@ -16,6 +16,6 @@ assets:
   js_compressor:  uglifier
   css_compressor: sass
   sources:
-  - public/css/skeleton/css
-  - public/css
-  - public/js
+  - _assets/css/skeleton/css
+  - _assets/css
+  - _assets/js

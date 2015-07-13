@@ -1,0 +1,70 @@
+<section>
+  <h2>Řazení vlaku</h2>
+  <form action="http://www.zelpage.cz/razeni/12/" method="get">
+    <input name="rocnik" type="hidden" value="14">
+    <input type="text" name="dotaz" maxlength="50" placeholder="ŽelPage" />
+    <input type="submit" name="cr" value="ČR" />
+    <input type="submit" name="sk" value="SK" />
+  </form>
+  <form name="vw_razeni2" method="get" action="http://www.vagonweb.cz/razeni/razeni.php">
+    <input name="rok" type="hidden" value="2014">
+    <input id="jmeno" name="jmeno" type="text" maxlength="50" placeholder="VagonWEB" />
+    <input name="najit" type="submit" value="Hledat" />
+  </form>
+  <div class="TrainTypes">
+    <div>
+      <a href="http://www.zelpage.cz/razeni/12/cr/Os/">Os</a>
+      <a href="http://www.zelpage.cz/razeni/12/cr/Sp/">Sp</a>
+      <a href="http://www.zelpage.cz/razeni/12/cr/R/">R</a>
+      <a href="http://www.zelpage.cz/razeni/12/cr/Ex/">Ex</a>
+    </div>
+    <div>
+      <a href="http://www.zelpage.cz/razeni/12/cr/IC/">IC</a>
+      <a href="http://www.zelpage.cz/razeni/12/cr/EC/">EC</a>
+      <a href="http://www.zelpage.cz/razeni/12/cr/LE/">LE</a>
+      <a href="http://www.zelpage.cz/razeni/12/cr/EN/">EN</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Poloha vlaku</h2>
+  <form action="http://tram.mobilnitabla.cz/tablo.php" method="GET">
+    <input type="text" name="zastavka" placeholder="MobilníTabla" />
+    <input type="submit" value="Vyhledat" />
+  </form>
+  <form action="http://www.prazsketramvaje.cz/showpage.php?" method="GET">
+    <select name="name">
+      <option>PrazskeTramvaje</option>
+      <option value="vozy_kobylisy">Kobylisy</option>
+      <option value="vozy_motol">Motol</option>
+      <option value="vozy_pankrac">Pankrác</option>
+      <option value="vozy_strasnice">Strašnice</option>
+      <option value="vozy_vokovice">Vokovice</option>
+      <option value="vozy_zizkov">Žižkov</option>
+      <option value="vozy_stresovice">Střešovice</option>
+      <option value="vozy_uddp">Ústřední dílny Hostivař</option>
+    </select>
+    <input type="submit" value="Přejít" />
+  </form>
+  <ul>
+    <li>
+      <a href="http://babitron.ic.cz/">Babitron</a> /
+      <a href="http://www.cd.cz/cd-online/poloha-vlaku/">ČD</a> /
+      <a href="http://provoz.szdc.cz/grapp/">GRAPP</a> /
+      <a href="http://regiojet.rfc.cz/">RJ</a>
+    </li>
+    <li>
+      <a href="http://kdymitojede.cz/pid/ns/it">KdyMiToJede</a> /
+      <a href="http://jrportal.dpp.cz/jrportal/Default.aspx?mi=0">DPPzstJŘ</a>
+    </li>
+    <li>
+      <a href="http://tram.mobilnitabla.cz">MobilniTabla</a> /
+      <a href="http://www.mpvnet.cz/pid/map">PID</a>
+    </li>
+    <li>
+      <a href="http://sotoris.cz/">ŠotoRIS</a> /
+      <a href="http://iris.bmhd.cz/">IRIS</a>
+    </li>
+  </ul>
+</section>
