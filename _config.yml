@@ -1,0 +1,21 @@
+name: "TranDir"
+description: "Czech Transport Directory"
+
+port: 3000
+production: true
+url: "http://trandir.pdostal.cz"
+
+markdown: rdiscount
+permalink: pretty
+highlighter: pygments
+
+exclude: ["Gemfile*", "Capfile", "lib/", "config/", "README.md"]
+
+assets:
+  cache: true
+  js_compressor:  uglifier
+  css_compressor: sass
+  sources:
+  - public/css/skeleton/css
+  - public/css
+  - public/js

@@ -1,3 +1,6 @@
 [submodule "public/css/skeleton"]
-	path = public/css/skeleton
+	path = _assets/css/skeleton
 	url = git@github.com:dhg/Skeleton.git
+[submodule "_plugins/jekyll-url-helper-filter"]
+	path = _plugins/jekyll-url-helper-filter
+	url = git@github.com:jhauraw/jekyll-url-helper-filter-plugin.git
