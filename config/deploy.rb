@@ -6,6 +6,9 @@ set :scm, :git
 set :format, :pretty
 set :log_level, :info
 
+set :rbenv_type, :user
+set :rbenv_ruby, File.read('.ruby-version').strip
+
 namespace :deploy do
   after :publishing, :uptime do
     on roles(:web), in: :groups do

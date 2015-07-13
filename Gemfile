@@ -10,5 +10,7 @@ gem 'uglifier'
 gem 'rdiscount'
 
 group :development do
-  gem 'capistrano'
+  gem 'capistrano', '~> 3.1'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rbenv', '~> 2.0', require: false
 end
